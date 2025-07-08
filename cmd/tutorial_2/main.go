@@ -20,4 +20,33 @@ func main() {
 	var intNum2 int = 2
 	fmt.Println(intNum1/ intNum2) // This will perform integer division
 	fmt.Println(intNum1% intNum2) // This will perform modulus operation
+
+	var myString string = "Hello, World!"
+	fmt.Println(myString)
+
+	fmt.Println(len("Y"))
+
+	var myBoolean bool = false
+	fmt.Println(myBoolean)
+
+	var intNum3 rune
+	fmt.Println(intNum3)
+
+	var myVar string = foo()
+	fmt.Println(myVar)
+
+	var1, var2 := 10, 20
+	fmt.Println("var1:", var1, "var2:", var2)
+
+	const myConst string = "This is a constant"
+	fmt.Println(myConst)
+
+	const pi float32 = 3.1415
+	fmt.Println("The value of pi is:", pi)
+
+
+}
+
+func foo() string {
+	return "Hello from foo!"
 }
