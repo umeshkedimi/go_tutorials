@@ -3,16 +3,21 @@ package main
 import "fmt"
 
 func main() {
-	var intArr [5]uint32
-	fmt.Println("Length of the array:", len(intArr))
-	fmt.Println("Capacity of the array:", cap(intArr))
-	fmt.Println("Elements of the array:", intArr)
-	fmt.Println(intArr[0])
-	fmt.Println(intArr[1:])
+	var intArr [4]int32 = [4]int32{1,2}
+	fmt.Println(intArr)
+	strArr := [4]string{"code", "is", "poetry", "!"}
+	fmt.Printf("%sing %s %s%s\n", strArr[0], strArr[1], strArr[2], strArr[3])
 
-	fmt.Println(&intArr[0])
-	fmt.Println(&intArr[1])
-	fmt.Println(&intArr[2])
-	fmt.Println(&intArr[3])
-	fmt.Println(&intArr[4])
+	intSlice := []int32{1, 2, 7}
+	fmt.Printf("intSlice: %v, len: %d, cap: %d\n", intSlice, len(intSlice), cap(intSlice))
+	intSlice = append(intSlice, 34, 2, 45, 76, 89)
+	fmt.Printf("intSlice: %v, len: %d, cap: %d\n", intSlice, len(intSlice), cap(intSlice))
+	fmt.Println(intSlice)
+
+	var intSlice2 []int32 = []int32{8,9}
+	intSlice = append(intSlice, intSlice2...)
+	fmt.Println(intSlice)
+
+	var intSlice3 []int32 = make([]int32, 5, 12)
+	fmt.Printf("intSlice3: %v, len: %d, cap: %d\n", intSlice3, len(intSlice3), cap(intSlice3))
 }
