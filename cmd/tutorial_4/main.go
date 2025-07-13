@@ -20,4 +20,36 @@ func main() {
 
 	var intSlice3 []int32 = make([]int32, 5, 12)
 	fmt.Printf("intSlice3: %v, len: %d, cap: %d\n", intSlice3, len(intSlice3), cap(intSlice3))
+
+	// map
+	var myMap map[string]uint8 = make(map[string]uint8)
+	myMap["umesh"] = 12
+	myMap["suresh"] = 34
+	myMap["rajesh"] = 56
+	fmt.Println(myMap)
+	fmt.Println(myMap["umesh"])
+	fmt.Println(myMap["unknown"]) // returns 0 for non-existing key
+
+	var myMap2 = map[string]uint8{"city": 123, "country": 255}
+	fmt.Println(myMap2)
+
+	var myMap3 = map[uint8]string{1: "one", 25: "two", 3: "three"}
+	fmt.Println(myMap3)
+
+	// delete(myMap2, "city")
+
+	var city, ok = myMap2["city"]
+	if ok {
+		fmt.Println("City found:", city)
+	} else {
+		fmt.Println("City not found")
+	}
+
+	for key, value := range myMap {
+		fmt.Printf("Key: %s, Value: %d\n", key, value)
+	}
+
+	for name, val := range myMap2 {
+		fmt.Printf("Name: %s Val: %d\n", name, val)
+	}
 }
