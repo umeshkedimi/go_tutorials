@@ -18,8 +18,8 @@ func main() {
 
 	var intNum1 int = 3
 	var intNum2 int = 2
-	fmt.Println(intNum1/ intNum2) // This will perform integer division
-	fmt.Println(intNum1% intNum2) // This will perform modulus operation
+	fmt.Println(intNum1 / intNum2) // This will perform integer division
+	fmt.Println(intNum1 % intNum2) // This will perform modulus operation
 
 	var myString string = "Hello, World!"
 	fmt.Println(myString)
@@ -43,7 +43,6 @@ func main() {
 
 	const pi float32 = 3.1415
 	fmt.Println("The value of pi is:", pi)
-
 
 }
 

@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var intArr [4]int32 = [4]int32{1,2}
+	var intArr [4]int32 = [4]int32{1, 2}
 	fmt.Println(intArr)
 	strArr := [4]string{"code", "is", "poetry", "!"}
 	fmt.Printf("%sing %s %s%s\n", strArr[0], strArr[1], strArr[2], strArr[3])
@@ -14,7 +14,7 @@ func main() {
 	fmt.Printf("intSlice: %v, len: %d, cap: %d\n", intSlice, len(intSlice), cap(intSlice))
 	fmt.Println(intSlice)
 
-	var intSlice2 []int32 = []int32{8,9}
+	var intSlice2 []int32 = []int32{8, 9}
 	intSlice = append(intSlice, intSlice2...)
 	fmt.Println(intSlice)
 

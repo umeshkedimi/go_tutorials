@@ -1,7 +1,9 @@
 package main
 
-import("fmt"
-	"errors")
+import (
+	"errors"
+	"fmt"
+)
 
 func main() {
 	var printValue string = "Hello, Go!"
@@ -10,7 +12,7 @@ func main() {
 	numerator := 10
 	denominator := 5
 	quotient, remainder, err := intDivision(numerator, denominator)
-	
+
 	switch {
 	case err != nil:
 		fmt.Printf("Error: %v\n", err)
