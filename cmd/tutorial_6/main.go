@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
@@ -13,9 +14,10 @@ func main() {
 	fmt.Printf("myRune = %v\n", myRune)
 
 	var strSlice = []string{"u", "m", "e", "s", "h", " ", "k"}
-	var catStr = ""
+	var strBuilder strings.Builder
 	for i := range strSlice {
-		catStr += strSlice[i]
+		strBuilder.WriteString(strSlice[i])
 	}
+	var catStr = strBuilder.String()
 	fmt.Printf("Concatenated string: %s\n", catStr)
 }
